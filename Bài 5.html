@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<p id="result2"></p>
+</body>
+<script>
+  let array1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  let array2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  function receive(string)
+  {
+    let a=prompt("Hãy Nhập Tên Của Ngôi Sao:");
+    let count=0;
+    for(let i=0;i<string.length;i++)
+    {
+      if(string[i]===a)
+      {
+        document.getElementById("result").innerHTML=array2[i];
+        count=0;
+        break;
+      }else count++;
+    }
+    if(count>0)
+    {
+      document.getElementById("result").innerHTML="Không tìm thấy ngôi sao";
+    }
+  }
+  receive(array1);
+</script>
+</html>
